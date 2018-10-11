@@ -1,0 +1,106 @@
+body
+{
+  width: 100%;
+  height: 100%;
+}
+
+.app
+{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  width: 400px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+
+/* header */
+.app .header
+{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 230px;
+  height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.app.is-open .header
+{
+  box-shadow: 0px 0px 0px 2px black;
+}
+
+.app .header > *:first-child
+{
+  padding-left: 10px;
+  padding-right: 7px;
+}
+
+/* content */
+.app .content
+{
+  display: none;
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.app.is-open .content
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.app .content .section
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app .content .section > *
+{
+  margin: 20px;
+}
+
+.app .content .section .quantify
+{
+  display: flex;
+}
+
+.app .content .section .quantify > span
+{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.app .content .section .quantify .square
+{
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(126, 126, 126);
+  color: white;
+  width: 20px;
+  height: 20px;  
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.app .content .section .quantify .square.disabled 
+{
+  background-color: #ccc;
+  cursor: not-allowed;
+}
