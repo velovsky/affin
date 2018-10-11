@@ -1,10 +1,3 @@
-//init
-const myApp = new myAppClass();
-myApp.render();
-
-const myApp2 = new myAppClass();
-myApp2.render();
-
 function myAppClass()
 {
   //props (default values)
@@ -129,8 +122,12 @@ function myAppClass()
       //pass old value
       this[type] = oldValue;
 
-      //disable criancas 'plus'
-      let pluses = this.app.querySelectorAll('.section.criancas .square.plus');
+      //disable adultos 'minus'
+      let minus = this.app.querySelectorAll('.section.adultos .square.minus');
+      this._toggleDisableClasses(minus, true);
+
+      //disable criancas e bebes 'plus'
+      let pluses = this.app.querySelectorAll('.section:not(.adultos) .square.plus');
       this._toggleDisableClasses(pluses, true);
 
       return;
@@ -144,8 +141,12 @@ function myAppClass()
       //pass old value
       this[type] = oldValue;
 
+      //disable adultos & criancas 'minus'
+      let minus = this.app.querySelectorAll('.section.adultos .square.minus');
+      this._toggleDisableClasses(minus, true);
+
       //disable bebes 'plus'
-      let pluses = this.app.querySelectorAll('.section.bebes .square.plus');
+      let pluses = this.app.querySelectorAll('.section:not(.adultos) .square.plus');
       this._toggleDisableClasses(pluses, true);
 
       return;

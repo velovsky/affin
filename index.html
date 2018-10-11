@@ -5,56 +5,14 @@
     <link rel="stylesheet" href="./app.css">
   </head>
   <body>
-    <div class="app">
-
-      <!-- BEGIN HEADER -->
-      <div class="header">
-        <img src="./user.png" alt="">
-        <span class="adulto-text">1 Adulto,</span>
-        <span class="crianca-text">1 Criança,</span>
-        <span class="bebe-text">1 Bebé</span>
-      </div>
-      <!-- END HEADER -->
-
-      <!-- BEGIN CONTENT -->
-      <div class="content">
-
-        <!-- SECTION -->
-        <div class="section adultos">
-          <span>Adultos (+12 anos)</span>
-          <div class="quantify">
-            <div class="square minus">-</div>
-            <span>1</span>
-            <div class="square plus">+</div>
-          </div>
-        </div>
-        <!-- SECTION -->
-        
-        <!-- SECTION -->
-        <div class="section">
-          <span>Crianças (2-11 anos)</span>
-          <div class="quantify">
-            <div class="square">-</div>
-            <span>0</span>
-            <div class="square">+</div>
-          </div>
-        </div>
-        <!-- SECTION -->
-
-        <!-- SECTION -->
-        <div class="section">
-          <span>Bebés (-2 anos)</span>
-          <div class="quantify">
-            <div class="square">-</div>
-            <span>0</span>
-            <div class="square">+</div>
-          </div>
-        </div>
-        <!-- SECTION -->
-
-      </div>
-      <!-- END CONTENT -->
-    </div>
     <script src="./app.js"></script>
+    <script>
+      //init
+      const myApp = new myAppClass();
+      myApp.render();
+
+      const myApp2 = new myAppClass();
+      myApp2.render();
+    </script>
   </body>
 </html>
